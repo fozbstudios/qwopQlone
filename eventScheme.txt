@@ -1,0 +1,22 @@
+event name ,first byte,second byte,description
+current score,0,$score,game sends this to update ai of current score 
+serverReady,1,n/a,"game sends this before star of first round, starts its own physics "
+final score,2,$score,"game sends this at the end when it has reset everything, lets ai now of current <round end"
+start,3,n/a,"ai sends this starts the game and its physics, also after getting final score to reset"
+momentaryPress,4,see below,ai sends this after receiving current score and deciding which keys to be pressed. Game keeps all of the chosen keys pressed until it get next press event
+,,0,none
+,,1,Q
+,,2,W
+,,3,O
+,,4,P
+,,5,QW
+,,6,QO
+,,7,QP
+,,8,WO
+,,9,WP
+,,10,OP
+,,11,QWO
+,,12,QWP
+,,13,QOP
+,,14,WOP
+,,15,QWOP
