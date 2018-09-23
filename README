@@ -1,3 +1,3 @@
 
 clone of the QWOP game made by Foddy. intended to be easier to integrate with an ai a team I was on wrote
-will be made in unity and use named pipes to talk to the ai(see eventScheme.txt)
+will be made in godot and use named pipes to talk to the ai(see eventScheme.txt)
