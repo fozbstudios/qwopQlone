@@ -1,13 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://skyBG.png" type="Texture" id=1]
 [ext_resource path="res://groundBG.png" type="Texture" id=2]
 [ext_resource path="res://physicsLine.png" type="Texture" id=3]
+[ext_resource path="res://torso.png" type="Texture" id=4]
+[ext_resource path="res://head.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.2109, 33.6714 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 29.6138
 
 [node name="root" type="Node" index="0"]
 
@@ -33,7 +40,6 @@ texture = ExtResource( 2 )
 
 [node name="groundLineStaticBody2D" type="StaticBody2D" parent="nonPlayer" index="1"]
 
-editor/display_folded = true
 position = Vector2( 509.774, 478.38 )
 scale = Vector2( 15.8728, 0.114857 )
 input_pickable = false
@@ -43,6 +49,9 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="groundLinephysicsLine" type="Sprite" parent="nonPlayer/groundLineStaticBody2D" index="0"]
 
@@ -56,5 +65,391 @@ position = Vector2( 0, 17.413 )
 shape = SubResource( 1 )
 
 [node name="player" type="Node" parent="." index="1"]
+
+[node name="torsoRigidBody2D" type="RigidBody2D" parent="player" index="0"]
+
+editor/display_folded = true
+position = Vector2( 324.812, 127.636 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="torsoCollisionShape2D" type="CollisionShape2D" parent="player/torsoRigidBody2D" index="0"]
+
+[node name="torsoSprite" type="Sprite" parent="player/torsoRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="rightUpArmRigidBody2D" type="RigidBody2D" parent="player" index="1"]
+
+editor/display_folded = true
+position = Vector2( 225.344, 222.703 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rightUpArmCollisionShape2D" type="CollisionShape2D" parent="player/rightUpArmRigidBody2D" index="0"]
+
+[node name="rightUpArmSprite" type="Sprite" parent="player/rightUpArmRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="rightThighRigidBody2D" type="RigidBody2D" parent="player" index="2"]
+
+editor/display_folded = true
+position = Vector2( 294.004, 278.159 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rightThighCollisionShape2D" type="CollisionShape2D" parent="player/rightThighRigidBody2D" index="0"]
+
+[node name="rightThighSprite" type="Sprite" parent="player/rightThighRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="rightFootRigidBody2D" type="RigidBody2D" parent="player" index="3"]
+
+editor/display_folded = true
+position = Vector2( 53.6953, 171.649 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rightFootCollisionShape2D" type="CollisionShape2D" parent="player/rightFootRigidBody2D" index="0"]
+
+[node name="rightFootSprite" type="Sprite" parent="player/rightFootRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player" index="4"]
+
+editor/display_folded = true
+position = Vector2( 107.391, 289.602 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rightDownArmCollisionShape2D" type="CollisionShape2D" parent="player/rightDownArmRigidBody2D" index="0"]
+
+[node name="rightDownArmSprite" type="Sprite" parent="player/rightDownArmRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="rightCalfRigidBody2D" type="RigidBody2D" parent="player" index="5"]
+
+editor/display_folded = true
+position = Vector2( 460.371, 277.279 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rightCalfCollisionShape2D" type="CollisionShape2D" parent="player/rightCalfRigidBody2D" index="0"]
+
+[node name="rightCalfSprite" type="Sprite" parent="player/rightCalfRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="leftUpArmRigidBody2D" type="RigidBody2D" parent="player" index="6"]
+
+editor/display_folded = true
+position = Vector2( 415.478, 84.5041 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leftUpArmCollisionShape2D" type="CollisionShape2D" parent="player/leftUpArmRigidBody2D" index="0"]
+
+[node name="leftUpArmSprite" type="Sprite" parent="player/leftUpArmRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="leftThighRigidBody2D" type="RigidBody2D" parent="player" index="7"]
+
+editor/display_folded = true
+position = Vector2( 358.262, 372.346 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leftThighCollisionShape2D" type="CollisionShape2D" parent="player/leftThighRigidBody2D" index="0"]
+
+[node name="leftThighSprite" type="Sprite" parent="player/leftThighRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="leftDownArmRigidBody2D" type="RigidBody2D" parent="player" index="8"]
+
+editor/display_folded = true
+position = Vector2( 378.508, 229.745 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leftDownArmCollisionShape2D" type="CollisionShape2D" parent="player/leftDownArmRigidBody2D" index="0"]
+
+[node name="leftDownArmSprite" type="Sprite" parent="player/leftDownArmRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="leftFootRigidBody2D" type="RigidBody2D" parent="player" index="9"]
+
+editor/display_folded = true
+position = Vector2( 184.853, 282.56 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leftFootCollisionShape2D" type="CollisionShape2D" parent="player/leftFootRigidBody2D" index="0"]
+
+[node name="leftFootSprite" type="Sprite" parent="player/leftFootRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="leftCalfRigidBody2D" type="RigidBody2D" parent="player" index="10"]
+
+editor/display_folded = true
+position = Vector2( 127.636, 98.5881 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leftCalfCollisionShape2D" type="CollisionShape2D" parent="player/leftCalfRigidBody2D" index="0"]
+
+[node name="leftCalfSprite" type="Sprite" parent="player/leftCalfRigidBody2D" index="1"]
+
+texture = ExtResource( 4 )
+
+[node name="HeadRigidBody2D" type="RigidBody2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 237.668, 47.5337 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="HeadRigidBody2D" index="0"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRigidBody2D" index="1"]
+
+shape = SubResource( 2 )
 
 
