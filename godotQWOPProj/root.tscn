@@ -31,42 +31,42 @@ extents = Vector2( 11.3437, 71.3363 )
 custom_solver_bias = 0.0
 extents = Vector2( 6.53479, 30.1013 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6.3367, 47.4707 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 27.3583, 6.69574 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6.08804, 36.6348 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 29.5441, 6.16235 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6.70007, 47.5462 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 26.6842, 6.38924 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6.35516, 16.9691 )
 
-[sub_resource type="CircleShape2D" id=10]
+[sub_resource type="CircleShape2D" id=11]
 
 custom_solver_bias = 0.0
 radius = 29.6138
@@ -224,7 +224,7 @@ __meta__ = {
 
 position = Vector2( 1.49012e-08, 2.98023e-08 )
 rotation = -0.504726
-shape = SubResource( 11 )
+shape = SubResource( 4 )
 
 [node name="rightThighSprite" type="Sprite" parent="player/rightThighRigidBody2D" index="1"]
 
@@ -234,7 +234,7 @@ texture = ExtResource( 6 )
 
 [node name="rightFootRigidBody2D" type="RigidBody2D" parent="player" index="3"]
 
-position = Vector2( 415.867, 385.757 )
+position = Vector2( 459.725, 382.34 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -261,6 +261,13 @@ __meta__ = {
 
 show_behind_parent = true
 texture = ExtResource( 7 )
+
+[node name="RightFootCollisionPolygon2D" type="CollisionPolygon2D" parent="player/rightFootRigidBody2D" index="1"]
+
+show_behind_parent = true
+build_mode = 0
+polygon = PoolVector2Array( 29.4533, 7.98526, 32.3012, 13.3963, 30.5925, 15.3898, 8.66357, 11.6876, -22.9482, 12.2571, -34.055, 11.9724, -33.7702, 6.56131, -31.2071, 3.9982, -28.644, 0.580719, -23.8026, -8.53259, -21.2395, -11.0957, -18.9612, -15.3676, -9.56302, -7.3934, -5.00638, -1.98242, 0.404633, 4.28299, 29.7381, 6.56134, 32.0164, 9.12445, 28.8837, 7.70047 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player" index="4"]
 
@@ -297,7 +304,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/rightDownArmRigidBody2D" index="1"]
 
 rotation = -0.465664
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="rightCalfRigidBody2D" type="RigidBody2D" parent="player" index="5"]
 
@@ -328,7 +335,7 @@ __meta__ = {
 
 position = Vector2( -2.04891e-08, 0 )
 rotation = 0.0856537
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="rightCalfSprite" type="Sprite" parent="player/rightCalfRigidBody2D" index="1"]
 
@@ -369,7 +376,7 @@ texture = ExtResource( 10 )
 
 position = Vector2( -0.268585, 0.121948 )
 rotation = -0.474863
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="leftThighRigidBody2D" type="RigidBody2D" parent="player" index="7"]
 
@@ -400,7 +407,7 @@ __meta__ = {
 
 position = Vector2( 2.79106e-08, 0 )
 rotation = 0.0161374
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="leftThighSprite" type="Sprite" parent="player/leftThighRigidBody2D" index="1"]
 
@@ -435,7 +442,7 @@ __meta__ = {
 [node name="leftDownArmCollisionShape2D" type="CollisionShape2D" parent="player/leftDownArmRigidBody2D" index="0"]
 
 rotation = -2.03326
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="leftDownArmSprite" type="Sprite" parent="player/leftDownArmRigidBody2D" index="1"]
 
@@ -444,7 +451,7 @@ texture = ExtResource( 12 )
 
 [node name="leftFootRigidBody2D" type="RigidBody2D" parent="player" index="9"]
 
-position = Vector2( 331.855, 386.611 )
+position = Vector2( 260.942, 377.213 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -472,7 +479,7 @@ __meta__ = {
 show_behind_parent = true
 texture = ExtResource( 13 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/leftFootRigidBody2D" index="1"]
+[node name="LeftFootCollisionPolygon2D" type="CollisionPolygon2D" parent="player/leftFootRigidBody2D" index="1"]
 
 show_behind_parent = true
 build_mode = 0
@@ -509,7 +516,7 @@ __meta__ = {
 position = Vector2( 0, 0.315948 )
 rotation = 0.0882028
 scale = Vector2( 1, 2.14734 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="leftCalfSprite" type="Sprite" parent="player/leftCalfRigidBody2D" index="1"]
 
@@ -549,6 +556,6 @@ texture = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRigidBody2D" index="1"]
 
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 
