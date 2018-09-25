@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://skyBG.png" type="Texture" id=1]
 [ext_resource path="res://groundBG.png" type="Texture" id=2]
@@ -31,12 +31,42 @@ extents = Vector2( 11.3437, 71.3363 )
 custom_solver_bias = 0.0
 extents = Vector2( 6.53479, 30.1013 )
 
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.3367, 47.4707 )
+
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.9608, 6.7449 )
+extents = Vector2( 27.3583, 6.69574 )
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.08804, 36.6348 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.5441, 6.16235 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.70007, 47.5462 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 26.6842, 6.38924 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.35516, 16.9691 )
+
+[sub_resource type="CircleShape2D" id=10]
 
 custom_solver_bias = 0.0
 radius = 29.6138
@@ -44,6 +74,8 @@ radius = 29.6138
 [node name="root" type="Node" index="0"]
 
 [node name="nonPlayer" type="Node" parent="." index="0"]
+
+editor/display_folded = true
 
 [node name="backgrounds" type="Node" parent="nonPlayer" index="0"]
 
@@ -129,7 +161,7 @@ texture = ExtResource( 4 )
 
 [node name="rightUpArmRigidBody2D" type="RigidBody2D" parent="player" index="1"]
 
-position = Vector2( 453.471, 110.21 )
+position = Vector2( 345.429, 93.5271 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -165,8 +197,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="rightThighRigidBody2D" type="RigidBody2D" parent="player" index="2"]
 
-editor/display_folded = true
-position = Vector2( 350.34, 230.625 )
+position = Vector2( 354.18, 228.559 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -191,15 +222,19 @@ __meta__ = {
 
 [node name="rightThighCollisionShape2D" type="CollisionShape2D" parent="player/rightThighRigidBody2D" index="0"]
 
+position = Vector2( 1.49012e-08, 2.98023e-08 )
+rotation = -0.504726
+shape = SubResource( 11 )
+
 [node name="rightThighSprite" type="Sprite" parent="player/rightThighRigidBody2D" index="1"]
 
 show_behind_parent = true
+position = Vector2( 0.138641, -0.155777 )
 texture = ExtResource( 6 )
 
 [node name="rightFootRigidBody2D" type="RigidBody2D" parent="player" index="3"]
 
-editor/display_folded = true
-position = Vector2( 380.268, 334.495 )
+position = Vector2( 415.867, 385.757 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -222,16 +257,14 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="rightFootCollisionShape2D" type="CollisionShape2D" parent="player/rightFootRigidBody2D" index="0"]
-
-[node name="rightFootSprite" type="Sprite" parent="player/rightFootRigidBody2D" index="1"]
+[node name="rightFootSprite" type="Sprite" parent="player/rightFootRigidBody2D" index="0"]
 
 show_behind_parent = true
 texture = ExtResource( 7 )
 
 [node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player" index="4"]
 
-position = Vector2( 384.659, 130.081 )
+position = Vector2( 384.659, 102.752 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -254,22 +287,21 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="rightDownArmCollisionShape2D" type="CollisionShape2D" parent="player/rightDownArmRigidBody2D" index="0"]
-
-position = Vector2( 3.05176e-05, 0.341026 )
-rotation = -0.470825
-shape = SubResource( 4 )
-
-[node name="rightDownArmSprite" type="Sprite" parent="player/rightDownArmRigidBody2D" index="1"]
+[node name="rightDownArmSprite" type="Sprite" parent="player/rightDownArmRigidBody2D" index="0"]
 
 show_behind_parent = true
 rotation = 0.00992234
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/rightDownArmRigidBody2D" index="1"]
+
+rotation = -0.465664
+shape = SubResource( 4 )
+
 [node name="rightCalfRigidBody2D" type="RigidBody2D" parent="player" index="5"]
 
-position = Vector2( 367.945, 289.602 )
+position = Vector2( 371.291, 298.16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -294,6 +326,10 @@ __meta__ = {
 
 [node name="rightCalfCollisionShape2D" type="CollisionShape2D" parent="player/rightCalfRigidBody2D" index="0"]
 
+position = Vector2( -2.04891e-08, 0 )
+rotation = 0.0856537
+shape = SubResource( 5 )
+
 [node name="rightCalfSprite" type="Sprite" parent="player/rightCalfRigidBody2D" index="1"]
 
 show_behind_parent = true
@@ -301,7 +337,7 @@ texture = ExtResource( 9 )
 
 [node name="leftUpArmRigidBody2D" type="RigidBody2D" parent="player" index="6"]
 
-position = Vector2( 266.558, 72.3069 )
+position = Vector2( 291.185, 83.9045 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -324,16 +360,20 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="leftUpArmCollisionShape2D" type="CollisionShape2D" parent="player/leftUpArmRigidBody2D" index="0"]
-
-[node name="leftUpArmSprite" type="Sprite" parent="player/leftUpArmRigidBody2D" index="1"]
+[node name="leftUpArmSprite" type="Sprite" parent="player/leftUpArmRigidBody2D" index="0"]
 
 show_behind_parent = true
 texture = ExtResource( 10 )
 
+[node name="leftUpArmCollisionBody" type="CollisionShape2D" parent="player/leftUpArmRigidBody2D" index="1"]
+
+position = Vector2( -0.268585, 0.121948 )
+rotation = -0.474863
+shape = SubResource( 6 )
+
 [node name="leftThighRigidBody2D" type="RigidBody2D" parent="player" index="7"]
 
-position = Vector2( 319.531, 239.428 )
+position = Vector2( 317.753, 234.719 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -358,6 +398,10 @@ __meta__ = {
 
 [node name="leftThighCollisionShape2D" type="CollisionShape2D" parent="player/leftThighRigidBody2D" index="0"]
 
+position = Vector2( 2.79106e-08, 0 )
+rotation = 0.0161374
+shape = SubResource( 7 )
+
 [node name="leftThighSprite" type="Sprite" parent="player/leftThighRigidBody2D" index="1"]
 
 show_behind_parent = true
@@ -365,7 +409,7 @@ texture = ExtResource( 11 )
 
 [node name="leftDownArmRigidBody2D" type="RigidBody2D" parent="player" index="8"]
 
-position = Vector2( 266.722, 142.19 )
+position = Vector2( 283.405, 117.563 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -390,6 +434,9 @@ __meta__ = {
 
 [node name="leftDownArmCollisionShape2D" type="CollisionShape2D" parent="player/leftDownArmRigidBody2D" index="0"]
 
+rotation = -2.03326
+shape = SubResource( 8 )
+
 [node name="leftDownArmSprite" type="Sprite" parent="player/leftDownArmRigidBody2D" index="1"]
 
 show_behind_parent = true
@@ -397,7 +444,7 @@ texture = ExtResource( 12 )
 
 [node name="leftFootRigidBody2D" type="RigidBody2D" parent="player" index="9"]
 
-position = Vector2( 331.855, 353.86 )
+position = Vector2( 331.855, 386.611 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -420,16 +467,21 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="leftFootCollisionShape2D" type="CollisionShape2D" parent="player/leftFootRigidBody2D" index="0"]
-
-[node name="leftFootSprite" type="Sprite" parent="player/leftFootRigidBody2D" index="1"]
+[node name="leftFootSprite" type="Sprite" parent="player/leftFootRigidBody2D" index="0"]
 
 show_behind_parent = true
 texture = ExtResource( 13 )
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/leftFootRigidBody2D" index="1"]
+
+show_behind_parent = true
+build_mode = 0
+polygon = PoolVector2Array( 29.4533, 7.98526, 32.3012, 13.3963, 30.5925, 15.3898, 8.66357, 11.6876, -22.9482, 12.2571, -34.055, 11.9724, -33.7702, 6.56131, -31.2071, 3.9982, -28.644, 0.580719, -23.8026, -8.53259, -21.2395, -11.0957, -18.9612, -15.3676, -9.56302, -7.3934, -5.00638, -1.98242, 0.404633, 4.28299, 29.7381, 6.56134, 32.0164, 9.12445, 28.8837, 7.70047 )
+_sections_unfolded = [ "Visibility" ]
+
 [node name="leftCalfRigidBody2D" type="RigidBody2D" parent="player" index="10"]
 
-position = Vector2( 315.129, 314.25 )
+position = Vector2( 314.458, 305.534 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -454,6 +506,11 @@ __meta__ = {
 
 [node name="leftCalfCollisionShape2D" type="CollisionShape2D" parent="player/leftCalfRigidBody2D" index="0"]
 
+position = Vector2( 0, 0.315948 )
+rotation = 0.0882028
+scale = Vector2( 1, 2.14734 )
+shape = SubResource( 9 )
+
 [node name="leftCalfSprite" type="Sprite" parent="player/leftCalfRigidBody2D" index="1"]
 
 show_behind_parent = true
@@ -462,7 +519,7 @@ texture = ExtResource( 14 )
 [node name="HeadRigidBody2D" type="RigidBody2D" parent="." index="2"]
 
 editor/display_folded = true
-position = Vector2( 313.682, -3.86442 )
+position = Vector2( 321.626, 28.7071 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -492,6 +549,6 @@ texture = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadRigidBody2D" index="1"]
 
-shape = SubResource( 5 )
+shape = SubResource( 10 )
 
 
