@@ -162,7 +162,6 @@ shape = SubResource( 2 )
 
 [node name="leftCalfRigidBody2D" type="RigidBody2D" parent="player/RBs" index="1"]
 
-editor/display_folded = true
 position = Vector2( 314.458, 305.534 )
 input_pickable = false
 collision_layer = 1
@@ -188,15 +187,17 @@ __meta__ = {
 
 [node name="leftCalfCollisionShape2D" type="CollisionShape2D" parent="player/RBs/leftCalfRigidBody2D" index="0"]
 
-visible = false
 position = Vector2( 0, 0.315948 )
 rotation = 0.0882028
 scale = Vector2( 1, 2.14734 )
 shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="leftCalfSprite" type="Sprite" parent="player/RBs/leftCalfRigidBody2D" index="1"]
 
+show_behind_parent = true
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="leftFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="2"]
 
@@ -274,8 +275,7 @@ texture = ExtResource( 7 )
 
 [node name="leftThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="4"]
 
-editor/display_folded = true
-position = Vector2( 317.753, 234.719 )
+position = Vector2( 317.753, 222.719 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -300,14 +300,16 @@ __meta__ = {
 
 [node name="leftThighCollisionShape2D" type="CollisionShape2D" parent="player/RBs/leftThighRigidBody2D" index="0"]
 
-visible = false
 position = Vector2( 2.79106e-08, 0 )
 rotation = 0.0161374
 shape = SubResource( 5 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="leftThighSprite" type="Sprite" parent="player/RBs/leftThighRigidBody2D" index="1"]
 
+show_behind_parent = true
 texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="leftUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="5"]
 
@@ -348,7 +350,8 @@ shape = SubResource( 6 )
 
 [node name="rightCalfRigidBody2D" type="RigidBody2D" parent="player/RBs" index="6"]
 
-position = Vector2( 371.291, 298.16 )
+editor/display_folded = true
+position = Vector2( 377.291, 306.16 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -376,14 +379,16 @@ __meta__ = {
 position = Vector2( -2.04891e-08, 0 )
 rotation = 0.0856537
 shape = SubResource( 7 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="rightCalfSprite" type="Sprite" parent="player/RBs/rightCalfRigidBody2D" index="1"]
 
+show_behind_parent = true
 texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="7"]
 
-editor/display_folded = true
 position = Vector2( 384.659, 102.752 )
 input_pickable = false
 collision_layer = 1
@@ -421,7 +426,8 @@ shape = SubResource( 8 )
 
 [node name="rightFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="8"]
 
-position = Vector2( 386.091, 350.416 )
+editor/display_folded = true
+position = Vector2( 393.091, 357.416 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -450,7 +456,6 @@ texture = ExtResource( 12 )
 
 [node name="RightFootCollisionPolygon2D" type="CollisionPolygon2D" parent="player/RBs/rightFootRigidBody2D" index="1"]
 
-visible = false
 build_mode = 0
 polygon = PoolVector2Array( 29.4533, 7.98526, 32.3012, 13.3963, 30.5925, 15.3898, 8.66357, 11.6876, -22.9482, 12.2571, -34.055, 11.9724, -33.7702, 6.56131, -31.2071, 3.9982, -28.644, 0.580719, -23.8026, -8.53259, -21.2395, -11.0957, -18.9612, -15.3676, -9.56302, -7.3934, -5.00638, -1.98242, 0.404633, 4.28299, 29.7381, 6.56134, 32.0164, 9.12445, 28.8837, 7.70047 )
 _sections_unfolded = [ "Visibility" ]
@@ -458,7 +463,8 @@ _sections_unfolded = [ "Visibility" ]
 [node name="rightThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="9"]
 
 editor/display_folded = true
-position = Vector2( 354.18, 228.559 )
+position = Vector2( 367.18, 233.559 )
+rotation = 0.310441
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -532,7 +538,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="torsoRigidBody2D" type="RigidBody2D" parent="player/RBs" index="11"]
 
-editor/display_folded = true
 position = Vector2( 323.956, 123.114 )
 input_pickable = false
 collision_layer = 1
@@ -552,19 +557,24 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="torsoCollisionShape2D" type="CollisionShape2D" parent="player/RBs/torsoRigidBody2D" index="0"]
 
-visible = false
+position = Vector2( 8.95307, -0.237786 )
 rotation = -0.0265529
+scale = Vector2( 2.79592, 1 )
 shape = SubResource( 11 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="torsoSprite" type="Sprite" parent="player/RBs/torsoRigidBody2D" index="1"]
+[node name="torsoSprite" type="Sprite" parent="player/RBs/torsoRigidBody2D/torsoCollisionShape2D" index="0"]
 
+rotation = 0.0265529
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="joints" type="Node" parent="player" index="1"]
 
@@ -575,7 +585,7 @@ node_a = NodePath("../../RBs/HeadRigidBody2D")
 node_b = NodePath("../../RBs/torsoRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="RfootRCalfJoint" type="PinJoint2D" parent="player/joints" index="1"]
 
@@ -588,7 +598,7 @@ softness = 0.09
 
 [node name="LFootLCalfJoint" type="PinJoint2D" parent="player/joints" index="2"]
 
-position = Vector2( 311.689, 342.992 )
+position = Vector2( 311.689, 343.709 )
 node_a = NodePath("../../RBs/leftCalfRigidBody2D")
 node_b = NodePath("../../RBs/leftFootRigidBody2D")
 bias = 0.0
@@ -597,12 +607,12 @@ softness = 0.09
 
 [node name="rightCalfRightThighJoint" type="PinJoint2D" parent="player/joints" index="3"]
 
-position = Vector2( 375.092, 271.136 )
+position = Vector2( 376.699, 278.042 )
 node_a = NodePath("../../RBs/rightThighRigidBody2D")
 node_b = NodePath("../../RBs/rightCalfRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="rightUpArmRightDownArmJoint" type="PinJoint2D" parent="player/joints" index="4"]
 
@@ -611,25 +621,27 @@ node_a = NodePath("../../RBs/rightUpArmRigidBody2D")
 node_b = NodePath("../../RBs/rightDownArmRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="torsoRightThighJoint" type="PinJoint2D" parent="player/joints" index="5"]
 
-position = Vector2( 338.548, 189.31 )
+position = Vector2( 362.925, 187.876 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
 node_b = NodePath("../../RBs/rightThighRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="torsoLeftThighJoint" type="PinJoint2D" parent="player/joints" index="6"]
 
-position = Vector2( 317.893, 187.721 )
+show_behind_parent = true
+position = Vector2( 315.025, 188.438 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
 node_b = NodePath("../../RBs/leftThighRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
+_sections_unfolded = [ "Visibility" ]
 
 [node name="torsoRightUpArmJoint" type="PinJoint2D" parent="player/joints" index="7"]
 
@@ -638,7 +650,7 @@ node_a = NodePath("../../RBs/torsoRigidBody2D")
 node_b = NodePath("../../RBs/rightUpArmRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="torsoLeftUpArmJoint" type="PinJoint2D" parent="player/joints" index="8"]
 
@@ -647,16 +659,16 @@ node_a = NodePath("../../RBs/torsoRigidBody2D")
 node_b = NodePath("../../RBs/leftUpArmRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="leftThighLeftCalfJoint" type="PinJoint2D" parent="player/joints" index="9"]
 
-position = Vector2( 319.482, 275.108 )
+position = Vector2( 318.765, 275.108 )
 node_a = NodePath("../../RBs/leftThighRigidBody2D")
 node_b = NodePath("../../RBs/leftCalfRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 [node name="leftUpArmLeftDownArmJoint" type="PinJoint2D" parent="player/joints" index="10"]
 
@@ -665,6 +677,6 @@ node_a = NodePath("../../RBs/leftUpArmRigidBody2D")
 node_b = NodePath("../../RBs/leftDownArmRigidBody2D")
 bias = 0.005
 disable_collision = false
-softness = 0.24
+softness = 0.12
 
 
