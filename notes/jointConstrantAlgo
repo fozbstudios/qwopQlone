@@ -1,0 +1,5 @@
+put points as childen on the far ends of each limb 
+calculate angle between them (vector math?)
+on kepress or ai cmd:
+    if angle is wigthin acceptable bounds apply (impulse or force?)
+        else cancel movement
