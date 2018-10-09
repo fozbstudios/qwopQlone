@@ -95,7 +95,7 @@ texture = ExtResource( 2 )
 
 [node name="groundLineStaticBody2D" type="StaticBody2D" parent="nonPlayer" index="1"]
 
-position = Vector2( 509.774, 478.38 )
+position = Vector2( 509.774, 382.38 )
 scale = Vector2( 15.8728, 0.114857 )
 input_pickable = false
 collision_layer = 1
@@ -104,9 +104,6 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="groundLinephysicsLine" type="Sprite" parent="nonPlayer/groundLineStaticBody2D" index="0"]
 
@@ -126,7 +123,6 @@ shape = SubResource( 1 )
 
 [node name="HeadRigidBody2D" type="RigidBody2D" parent="player/RBs" index="0"]
 
-editor/display_folded = true
 position = Vector2( 320.909, 21.6883 )
 input_pickable = false
 collision_layer = 1
@@ -240,7 +236,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="leftDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="3"]
 
 editor/display_folded = true
-position = Vector2( 283.405, 117.563 )
+position = Vector2( 268.405, 122.563 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -314,7 +310,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="leftUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="5"]
 
 editor/display_folded = true
-position = Vector2( 291.185, 83.9045 )
+position = Vector2( 276.185, 83.9045 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -389,7 +385,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="7"]
 
-position = Vector2( 384.659, 102.752 )
+position = Vector2( 410.659, 107.752 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -463,7 +459,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="rightThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="9"]
 
 editor/display_folded = true
-position = Vector2( 367.18, 233.559 )
+position = Vector2( 367.18, 226.559 )
 rotation = 0.310441
 input_pickable = false
 collision_layer = 1
@@ -502,7 +498,7 @@ texture = ExtResource( 13 )
 [node name="rightUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="10"]
 
 editor/display_folded = true
-position = Vector2( 346.223, 93.5271 )
+position = Vector2( 376.223, 89.5271 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -616,7 +612,7 @@ softness = 0.12
 
 [node name="rightUpArmRightDownArmJoint" type="PinJoint2D" parent="player/joints" index="4"]
 
-position = Vector2( 362.381, 116.223 )
+position = Vector2( 389.381, 119.223 )
 node_a = NodePath("../../RBs/rightUpArmRigidBody2D")
 node_b = NodePath("../../RBs/rightDownArmRigidBody2D")
 bias = 0.005
@@ -645,7 +641,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="torsoRightUpArmJoint" type="PinJoint2D" parent="player/joints" index="7"]
 
-position = Vector2( 337.754, 70.1461 )
+position = Vector2( 357.754, 70.1461 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
 node_b = NodePath("../../RBs/rightUpArmRigidBody2D")
 bias = 0.005
@@ -654,7 +650,7 @@ softness = 0.12
 
 [node name="torsoLeftUpArmJoint" type="PinJoint2D" parent="player/joints" index="8"]
 
-position = Vector2( 313.921, 76.5015 )
+position = Vector2( 300.921, 75.5015 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
 node_b = NodePath("../../RBs/leftUpArmRigidBody2D")
 bias = 0.005
@@ -672,7 +668,7 @@ softness = 0.12
 
 [node name="leftUpArmLeftDownArmJoint" type="PinJoint2D" parent="player/joints" index="10"]
 
-position = Vector2( 271.816, 99.5398 )
+position = Vector2( 254.816, 99.5398 )
 node_a = NodePath("../../RBs/leftUpArmRigidBody2D")
 node_b = NodePath("../../RBs/leftDownArmRigidBody2D")
 bias = 0.005
