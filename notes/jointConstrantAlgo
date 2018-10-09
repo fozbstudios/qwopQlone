@@ -1,5 +1,8 @@
 put points as childen on the far ends of each limb 
-calculate angle between them (vector math?)
 on kepress or ai cmd:
-    if angle is wigthin acceptable bounds apply (impulse or force?)
+    apply (impulse or force?)
         else cancel movement
+on physics tick
+    calculate angle between points (vector math?)
+    if angle isnt within bounds
+        cancel rotation of physicically lower limb
