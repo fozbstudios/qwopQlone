@@ -1,0 +1,10 @@
+fix feet
+implement collision layering(9player pices all aon own layer so they dont colid with themselves)
+impement game reset
+understand rotation(what it is relative to and which dir is zero
+implent scoring 
+high score betwween runs
+make hin stand statically 
+add ai events
+fix joint positions?
+hrudle
