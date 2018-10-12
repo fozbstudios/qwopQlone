@@ -52,33 +52,33 @@ extents = Vector2( 6.70007, 47.5462 )
 custom_solver_bias = 0.0
 extents = Vector2( 29.5441, 6.16235 )
 
-[sub_resource type="GDScript" id=12]
+[sub_resource type="GDScript" id=7]
 
 script/source = ""
-
-[sub_resource type="RectangleShape2D" id=7]
-
-custom_solver_bias = 0.0
-extents = Vector2( 6.08804, 36.6348 )
-script = SubResource( 12 )
-_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
-extents = Vector2( 27.3583, 6.69574 )
+extents = Vector2( 6.08804, 36.6348 )
+script = SubResource( 7 )
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
-extents = Vector2( 6.3367, 47.4707 )
+extents = Vector2( 27.3583, 6.69574 )
 
 [sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
-extents = Vector2( 6.53479, 30.1013 )
+extents = Vector2( 6.3367, 47.4707 )
 
 [sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.53479, 30.1013 )
+
+[sub_resource type="RectangleShape2D" id=12]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.3437, 71.3363 )
@@ -107,15 +107,17 @@ texture = ExtResource( 2 )
 
 [node name="groundLineStaticBody2D" type="StaticBody2D" parent="nonPlayer" index="1"]
 
+editor/display_folded = true
 position = Vector2( 509.774, 382.38 )
 scale = Vector2( 15.8728, 0.114857 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 4
+collision_mask = 11
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="groundLinephysicsLine" type="Sprite" parent="nonPlayer/groundLineStaticBody2D" index="0"]
 
@@ -135,10 +137,11 @@ shape = SubResource( 1 )
 
 [node name="HeadRigidBody2D" type="RigidBody2D" parent="player/RBs" index="0"]
 
+editor/display_folded = true
 position = Vector2( 320.909, 21.6883 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 8
+collision_mask = 12
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -154,6 +157,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -170,10 +174,11 @@ shape = SubResource( 2 )
 
 [node name="leftCalfRigidBody2D" type="RigidBody2D" parent="player/RBs" index="1"]
 
+editor/display_folded = true
 position = Vector2( 314.458, 305.534 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -190,6 +195,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 5 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -210,10 +216,11 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="leftFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="2"]
 
+editor/display_folded = true
 position = Vector2( 329.851, 359.11 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -229,6 +236,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -251,7 +259,7 @@ editor/display_folded = true
 position = Vector2( 268.405, 122.563 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -267,6 +275,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -283,10 +292,11 @@ texture = ExtResource( 8 )
 
 [node name="leftThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="4"]
 
+editor/display_folded = true
 position = Vector2( 317.753, 222.719 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -303,6 +313,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 9 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -326,7 +337,7 @@ editor/display_folded = true
 position = Vector2( 276.185, 83.9045 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -342,6 +353,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -362,8 +374,8 @@ shape = SubResource( 6 )
 editor/display_folded = true
 position = Vector2( 377.291, 306.16 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -380,6 +392,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 12 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -388,7 +401,7 @@ __meta__ = {
 
 position = Vector2( -2.04891e-08, 0 )
 rotation = 0.0856537
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
 [node name="rightCalfSprite" type="Sprite" parent="player/RBs/rightCalfRigidBody2D" index="1"]
@@ -403,7 +416,7 @@ editor/display_folded = true
 position = Vector2( 410.659, 107.752 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -420,6 +433,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 14 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -433,15 +447,16 @@ _sections_unfolded = [ "Visibility" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/RBs/rightDownArmRigidBody2D" index="1"]
 
 rotation = -0.465664
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 script = ExtResource( 16 )
 
 [node name="rightFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="8"]
 
+editor/display_folded = true
 position = Vector2( 393.091, 357.416 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 4
 mode = 0
 mass = 0.46
 friction = 1.0
@@ -457,6 +472,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -478,7 +494,7 @@ position = Vector2( 367.18, 226.559 )
 rotation = 0.310441
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -495,6 +511,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 18 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -504,7 +521,7 @@ __meta__ = {
 visible = false
 position = Vector2( 1.49012e-08, 2.98023e-08 )
 rotation = -0.504726
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="rightThighSprite" type="Sprite" parent="player/RBs/rightThighRigidBody2D" index="1"]
 
@@ -517,7 +534,7 @@ editor/display_folded = true
 position = Vector2( 376.223, 89.5271 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 4
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -533,6 +550,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -541,7 +559,7 @@ __meta__ = {
 
 visible = false
 rotation = -0.457815
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="rightUpArmSprite" type="Sprite" parent="player/RBs/rightUpArmRigidBody2D" index="1"]
 
@@ -550,10 +568,11 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="torsoRigidBody2D" type="RigidBody2D" parent="player/RBs" index="11"]
 
+editor/display_folded = true
 position = Vector2( 323.956, 123.114 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 8
+collision_mask = 12
 mode = 0
 mass = 1.0
 friction = 1.0
@@ -569,7 +588,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -579,7 +598,7 @@ __meta__ = {
 position = Vector2( 8.95307, -0.237786 )
 rotation = -0.0265529
 scale = Vector2( 2.79592, 1 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="torsoSprite" type="Sprite" parent="player/RBs/torsoRigidBody2D/torsoCollisionShape2D" index="0"]
@@ -589,6 +608,8 @@ texture = ExtResource( 21 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="joints" type="Node" parent="player" index="1"]
+
+editor/display_folded = true
 
 [node name="headTorsoJoint" type="PinJoint2D" parent="player/joints" index="0"]
 
