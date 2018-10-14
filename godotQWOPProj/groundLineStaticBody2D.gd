@@ -16,7 +16,7 @@ func _ready():
 	self.connect("body_entered" ,self,"reset") 
 #	self.connect("body_shape_exited" ,self,"reset") 
 #	self.connect("body_shape_entered" ,self,"reset") 
-	print(self.get_signal_connection_list("body_entered"))
+#	print(self.get_signal_connection_list("body_entered"))
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
