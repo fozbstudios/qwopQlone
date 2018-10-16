@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://skyBG.png" type="Texture" id=1]
 [ext_resource path="res://groundBG.png" type="Texture" id=2]
@@ -7,21 +7,20 @@
 [ext_resource path="res://head.png" type="Texture" id=5]
 [ext_resource path="res://leftCalfRigidBody2D.gd" type="Script" id=6]
 [ext_resource path="res://leftCalf.png" type="Texture" id=7]
-[ext_resource path="res://leftFoot.png" type="Texture" id=8]
-[ext_resource path="res://lefttDownArm.png" type="Texture" id=9]
-[ext_resource path="res://leftThighRigidBody2D.gd" type="Script" id=10]
-[ext_resource path="res://lefttThigh.png" type="Texture" id=11]
-[ext_resource path="res://lefttUpArm.png" type="Texture" id=12]
-[ext_resource path="res://calfScript.gd" type="Script" id=13]
-[ext_resource path="res://rightCalf.png" type="Texture" id=14]
-[ext_resource path="res://rightDownArmRigidBody2D.gd" type="Script" id=15]
-[ext_resource path="res://rightDownArm.png" type="Texture" id=16]
-[ext_resource path="res://CollisionShape2D.gd" type="Script" id=17]
-[ext_resource path="res://rightFoot.png" type="Texture" id=18]
-[ext_resource path="res://rightThighRigidBody2D.gd" type="Script" id=19]
-[ext_resource path="res://rightThigh.png" type="Texture" id=20]
-[ext_resource path="res://rightUpArm.png" type="Texture" id=21]
-[ext_resource path="res://torso.png" type="Texture" id=22]
+[ext_resource path="res://lefttDownArm.png" type="Texture" id=8]
+[ext_resource path="res://leftThighRigidBody2D.gd" type="Script" id=9]
+[ext_resource path="res://lefttThigh.png" type="Texture" id=10]
+[ext_resource path="res://lefttUpArm.png" type="Texture" id=11]
+[ext_resource path="res://calfScript.gd" type="Script" id=12]
+[ext_resource path="res://rightCalf.png" type="Texture" id=13]
+[ext_resource path="res://rightDownArmRigidBody2D.gd" type="Script" id=14]
+[ext_resource path="res://rightDownArm.png" type="Texture" id=15]
+[ext_resource path="res://CollisionShape2D.gd" type="Script" id=16]
+[ext_resource path="res://rightThighRigidBody2D.gd" type="Script" id=17]
+[ext_resource path="res://rightThigh.png" type="Texture" id=18]
+[ext_resource path="res://rightUpArm.png" type="Texture" id=19]
+[ext_resource path="res://torso.png" type="Texture" id=20]
+[ext_resource path="res://rightFoot.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -108,7 +107,7 @@ texture = ExtResource( 2 )
 
 [node name="groundLineStaticBody2D" type="RigidBody2D" parent="nonPlayer" index="1"]
 
-position = Vector2( 509.774, 382.38 )
+position = Vector2( 509.774, 427.38 )
 input_pickable = false
 collision_layer = 4
 collision_mask = 11
@@ -183,7 +182,6 @@ shape = SubResource( 2 )
 
 [node name="leftCalfRigidBody2D" type="RigidBody2D" parent="player/RBs" index="1"]
 
-editor/display_folded = true
 position = Vector2( 314.458, 305.534 )
 input_pickable = false
 collision_layer = 2
@@ -223,46 +221,7 @@ show_behind_parent = true
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="leftFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="2"]
-
-editor/display_folded = true
-position = Vector2( 329.851, 359.11 )
-input_pickable = false
-collision_layer = 2
-collision_mask = 4
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-_sections_unfolded = [ "Collision" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="leftFootSprite" type="Sprite" parent="player/RBs/leftFootRigidBody2D" index="0"]
-
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="LeftFootCollisionPolygon2D" type="CollisionPolygon2D" parent="player/RBs/leftFootRigidBody2D" index="1"]
-
-visible = false
-build_mode = 0
-polygon = PoolVector2Array( 29.4533, 7.98526, 32.3012, 13.3963, 30.5925, 15.3898, 8.66357, 11.6876, -22.9482, 12.2571, -34.055, 11.9724, -33.7702, 6.56131, -31.2071, 3.9982, -28.644, 0.580719, -23.8026, -8.53259, -21.2395, -11.0957, -18.9612, -15.3676, -9.56302, -7.3934, -5.00638, -1.98242, 0.404633, 4.28299, 29.7381, 6.56134, 32.0164, 9.12445, 28.8837, 7.70047 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="leftDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="3"]
+[node name="leftDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="2"]
 
 editor/display_folded = true
 position = Vector2( 268.405, 122.563 )
@@ -297,9 +256,9 @@ shape = SubResource( 4 )
 
 [node name="leftDownArmSprite" type="Sprite" parent="player/RBs/leftDownArmRigidBody2D" index="1"]
 
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
-[node name="leftThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="4"]
+[node name="leftThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="3"]
 
 editor/display_folded = true
 position = Vector2( 317.753, 222.719 )
@@ -321,7 +280,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-script = ExtResource( 10 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -337,10 +296,10 @@ _sections_unfolded = [ "Visibility" ]
 [node name="leftThighSprite" type="Sprite" parent="player/RBs/leftThighRigidBody2D" index="1"]
 
 show_behind_parent = true
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="leftUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="5"]
+[node name="leftUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="4"]
 
 editor/display_folded = true
 position = Vector2( 276.185, 83.9045 )
@@ -369,7 +328,7 @@ __meta__ = {
 
 [node name="leftUpArmSprite" type="Sprite" parent="player/RBs/leftUpArmRigidBody2D" index="0"]
 
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="leftUpArmCollisionBody" type="CollisionShape2D" parent="player/RBs/leftUpArmRigidBody2D" index="1"]
 
@@ -378,9 +337,8 @@ position = Vector2( -0.268585, 0.121948 )
 rotation = -0.474863
 shape = SubResource( 6 )
 
-[node name="rightCalfRigidBody2D" type="RigidBody2D" parent="player/RBs" index="6"]
+[node name="rightCalfRigidBody2D" type="RigidBody2D" parent="player/RBs" index="5"]
 
-editor/display_folded = true
 position = Vector2( 377.291, 306.16 )
 input_pickable = false
 collision_layer = 2
@@ -400,7 +358,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -416,10 +374,10 @@ _sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index"
 [node name="rightCalfSprite" type="Sprite" parent="player/RBs/rightCalfRigidBody2D" index="1"]
 
 show_behind_parent = true
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="7"]
+[node name="rightDownArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="6"]
 
 editor/display_folded = true
 position = Vector2( 410.659, 107.752 )
@@ -441,7 +399,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-script = ExtResource( 15 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -450,53 +408,16 @@ __meta__ = {
 [node name="rightDownArmSprite" type="Sprite" parent="player/RBs/rightDownArmRigidBody2D" index="0"]
 
 rotation = 0.00992234
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/RBs/rightDownArmRigidBody2D" index="1"]
 
 rotation = -0.465664
 shape = SubResource( 9 )
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 
-[node name="rightFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="8"]
-
-editor/display_folded = true
-position = Vector2( 393.091, 357.416 )
-input_pickable = false
-collision_layer = 2
-collision_mask = 4
-mode = 0
-mass = 0.46
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-_sections_unfolded = [ "Collision" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="rightFootSprite" type="Sprite" parent="player/RBs/rightFootRigidBody2D" index="0"]
-
-texture = ExtResource( 18 )
-
-[node name="RightFootCollisionPolygon2D" type="CollisionPolygon2D" parent="player/RBs/rightFootRigidBody2D" index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( 29.4533, 7.98526, 32.3012, 13.3963, 30.5925, 15.3898, 8.66357, 11.6876, -22.9482, 12.2571, -34.055, 11.9724, -33.7702, 6.56131, -31.2071, 3.9982, -28.644, 0.580719, -23.8026, -8.53259, -21.2395, -11.0957, -18.9612, -15.3676, -9.56302, -7.3934, -5.00638, -1.98242, 0.404633, 4.28299, 29.7381, 6.56134, 32.0164, 9.12445, 28.8837, 7.70047 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="rightThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="9"]
+[node name="rightThighRigidBody2D" type="RigidBody2D" parent="player/RBs" index="7"]
 
 editor/display_folded = true
 position = Vector2( 367.18, 226.559 )
@@ -519,7 +440,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-script = ExtResource( 19 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -535,9 +456,9 @@ shape = SubResource( 10 )
 [node name="rightThighSprite" type="Sprite" parent="player/RBs/rightThighRigidBody2D" index="1"]
 
 position = Vector2( 0.138641, -0.155777 )
-texture = ExtResource( 20 )
+texture = ExtResource( 18 )
 
-[node name="rightUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="10"]
+[node name="rightUpArmRigidBody2D" type="RigidBody2D" parent="player/RBs" index="8"]
 
 editor/display_folded = true
 position = Vector2( 376.223, 89.5271 )
@@ -572,10 +493,10 @@ shape = SubResource( 11 )
 
 [node name="rightUpArmSprite" type="Sprite" parent="player/RBs/rightUpArmRigidBody2D" index="1"]
 
-texture = ExtResource( 21 )
+texture = ExtResource( 19 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="torsoRigidBody2D" type="RigidBody2D" parent="player/RBs" index="11"]
+[node name="torsoRigidBody2D" type="RigidBody2D" parent="player/RBs" index="9"]
 
 editor/display_folded = true
 position = Vector2( 323.956, 123.114 )
@@ -613,12 +534,80 @@ _sections_unfolded = [ "Visibility" ]
 [node name="torsoSprite" type="Sprite" parent="player/RBs/torsoRigidBody2D/torsoCollisionShape2D" index="0"]
 
 rotation = 0.0265529
-texture = ExtResource( 22 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="joints" type="Node" parent="player" index="1"]
+[node name="LeftFootRigidBody2D" type="RigidBody2D" parent="player/RBs" index="10"]
 
-editor/display_folded = true
+position = Vector2( 316.972, 359.765 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 4
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LeftFootSprite" type="Sprite" parent="player/RBs/LeftFootRigidBody2D" index="0"]
+
+texture = ExtResource( 21 )
+
+[node name="LeftFootCollisionPoly" type="CollisionPolygon2D" parent="player/RBs/LeftFootRigidBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 20.4156, 12.2656, -0.505295, 12.2656, -18.7142, 12.2656, -15.6148, 4.12972, -10.9657, -5.16843, -5.15437, -15.6289, 6.0809, -5.16843, 11.1174, 1.03034, 14.6042, 4.51714, 19.2533, 3.7423 )
+
+[node name="RightFootRB2d2" type="RigidBody2D" parent="player/RBs" index="11"]
+
+position = Vector2( 379.216, 360.024 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 4
+mode = 0
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RightFootSprite" type="Sprite" parent="player/RBs/RightFootRB2d2" index="0"]
+
+texture = ExtResource( 21 )
+
+[node name="RightFootCollisionPoly" type="CollisionPolygon2D" parent="player/RBs/RightFootRB2d2" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 20.4156, 12.2656, -0.505295, 12.2656, -18.7142, 12.2656, -15.6148, 4.12972, -10.9657, -5.16843, -5.15437, -15.6289, 6.0809, -5.16843, 11.1174, 1.03034, 14.6042, 4.51714, 19.2533, 3.7423 )
+
+[node name="joints" type="Node" parent="player" index="1"]
 
 [node name="headTorsoJoint" type="PinJoint2D" parent="player/joints" index="0"]
 
@@ -629,25 +618,7 @@ bias = 0.005
 disable_collision = false
 softness = 0.12
 
-[node name="RfootRCalfJoint" type="PinJoint2D" parent="player/joints" index="1"]
-
-position = Vector2( 367.751, 334.816 )
-node_a = NodePath("../../RBs/rightFootRigidBody2D")
-node_b = NodePath("../../RBs/rightCalfRigidBody2D")
-bias = 0.0
-disable_collision = false
-softness = 0.09
-
-[node name="LFootLCalfJoint" type="PinJoint2D" parent="player/joints" index="2"]
-
-position = Vector2( 311.689, 343.709 )
-node_a = NodePath("../../RBs/leftCalfRigidBody2D")
-node_b = NodePath("../../RBs/leftFootRigidBody2D")
-bias = 0.0
-disable_collision = false
-softness = 0.09
-
-[node name="rightCalfRightThighJoint" type="PinJoint2D" parent="player/joints" index="3"]
+[node name="rightCalfRightThighJoint" type="PinJoint2D" parent="player/joints" index="1"]
 
 position = Vector2( 376.699, 278.042 )
 node_a = NodePath("../../RBs/rightThighRigidBody2D")
@@ -656,7 +627,7 @@ bias = 0.005
 disable_collision = true
 softness = 0.12
 
-[node name="rightUpArmRightDownArmJoint" type="PinJoint2D" parent="player/joints" index="4"]
+[node name="rightUpArmRightDownArmJoint" type="PinJoint2D" parent="player/joints" index="2"]
 
 position = Vector2( 389.381, 119.223 )
 node_a = NodePath("../../RBs/rightUpArmRigidBody2D")
@@ -665,7 +636,7 @@ bias = 0.005
 disable_collision = false
 softness = 0.12
 
-[node name="torsoRightThighJoint" type="PinJoint2D" parent="player/joints" index="5"]
+[node name="torsoRightThighJoint" type="PinJoint2D" parent="player/joints" index="3"]
 
 position = Vector2( 362.925, 187.876 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
@@ -674,7 +645,7 @@ bias = 0.005
 disable_collision = true
 softness = 0.12
 
-[node name="torsoLeftThighJoint" type="PinJoint2D" parent="player/joints" index="6"]
+[node name="torsoLeftThighJoint" type="PinJoint2D" parent="player/joints" index="4"]
 
 show_behind_parent = true
 position = Vector2( 315.025, 188.438 )
@@ -685,7 +656,7 @@ disable_collision = true
 softness = 0.12
 _sections_unfolded = [ "Visibility" ]
 
-[node name="torsoRightUpArmJoint" type="PinJoint2D" parent="player/joints" index="7"]
+[node name="torsoRightUpArmJoint" type="PinJoint2D" parent="player/joints" index="5"]
 
 position = Vector2( 357.754, 70.1461 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
@@ -694,7 +665,7 @@ bias = 0.005
 disable_collision = false
 softness = 0.12
 
-[node name="torsoLeftUpArmJoint" type="PinJoint2D" parent="player/joints" index="8"]
+[node name="torsoLeftUpArmJoint" type="PinJoint2D" parent="player/joints" index="6"]
 
 position = Vector2( 300.921, 75.5015 )
 node_a = NodePath("../../RBs/torsoRigidBody2D")
@@ -703,7 +674,7 @@ bias = 0.005
 disable_collision = false
 softness = 0.12
 
-[node name="leftThighLeftCalfJoint" type="PinJoint2D" parent="player/joints" index="9"]
+[node name="leftThighLeftCalfJoint" type="PinJoint2D" parent="player/joints" index="7"]
 
 position = Vector2( 318.765, 275.108 )
 node_a = NodePath("../../RBs/leftThighRigidBody2D")
@@ -712,13 +683,31 @@ bias = 0.005
 disable_collision = true
 softness = 0.12
 
-[node name="leftUpArmLeftDownArmJoint" type="PinJoint2D" parent="player/joints" index="10"]
+[node name="leftUpArmLeftDownArmJoint" type="PinJoint2D" parent="player/joints" index="8"]
 
 position = Vector2( 254.816, 99.5398 )
 node_a = NodePath("../../RBs/leftUpArmRigidBody2D")
 node_b = NodePath("../../RBs/leftDownArmRigidBody2D")
 bias = 0.005
 disable_collision = false
+softness = 0.12
+
+[node name="leftCalfLeftFoootJoint" type="PinJoint2D" parent="player/joints" index="9"]
+
+position = Vector2( 311.735, 340.901 )
+node_a = NodePath("../../RBs/leftCalfRigidBody2D")
+node_b = NodePath("../../RBs/LeftFootRigidBody2D")
+bias = 0.006
+disable_collision = true
+softness = 0.12
+
+[node name="rightCalfRightFootJoint" type="PinJoint2D" parent="player/joints" index="10"]
+
+position = Vector2( 375.777, 342.414 )
+node_a = NodePath("../../RBs/rightCalfRigidBody2D")
+node_b = NodePath("../../RBs/RightFootRB2d2")
+bias = 0.005
+disable_collision = true
 softness = 0.12
 
 
