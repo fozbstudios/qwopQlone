@@ -11,6 +11,8 @@ func _ready():
 
 	
 func _integrate_forces(state):
-	if Input.is_action_just_pressed("rightThigh"):
+	if Input.is_action_pressed("rightThigh"):
 		#state.apply_torque_impulse(-1)
 		state.angular_velocity=-5
+	else:
+		state.angular_velocity=0
