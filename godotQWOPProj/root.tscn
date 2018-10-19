@@ -205,7 +205,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 6 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -284,7 +284,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 9 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -343,7 +343,6 @@ shape = SubResource( 6 )
 [node name="rightCalfRigidBody2D" type="RigidBody2D" parent="playerRoot/RBs" index="5"]
 
 position = Vector2( 357.925, 303.519 )
-rotation = -0.0474389
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -363,7 +362,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 12 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -425,7 +424,7 @@ script = ExtResource( 16 )
 
 editor/display_folded = true
 position = Vector2( 359.18, 221.559 )
-rotation = 0.500903
+rotation = 0.523599
 input_pickable = false
 collision_layer = 1
 collision_mask = 4
@@ -445,7 +444,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 17 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Pause", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -631,6 +630,7 @@ node_b = NodePath("../../RBs/rightCalfRigidBody2D")
 bias = 0.005
 disable_collision = true
 softness = 0.12
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="rightUpArmRightDownArmJoint" type="PinJoint2D" parent="playerRoot/joints" index="2"]
 
@@ -659,7 +659,7 @@ node_b = NodePath("../../RBs/leftThighRigidBody2D")
 bias = 0.005
 disable_collision = true
 softness = 0.12
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="torsoRightUpArmJoint" type="PinJoint2D" parent="playerRoot/joints" index="5"]
 

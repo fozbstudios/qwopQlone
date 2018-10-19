@@ -1,4 +1,4 @@
-extends "res://commonCustomRB2d.gd"
+extends "res://CustomThigh.gd"
 
 # class member variables go here, for example:
 # var a = 2

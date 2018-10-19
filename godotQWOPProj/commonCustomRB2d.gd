@@ -9,7 +9,7 @@ var ctrlVelo
 #nodeName(relative to playerRoot/RBs if doesnt contain. else format is:
 		#nodeName.DictKey 
 var constrainRotationStr  
-
+var shouldConstrain #bool used for constraining
 # vect used for constraining rotation that other nodes dont use
 var myConstrainRotationVect 
 
@@ -17,10 +17,13 @@ var myConstrainRotationVect
 var ConstrainRotationResource 
 var phyState
 
+var rotationOffsetAmm #  radians, hack used to fix anomoly with rightThigh
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	self.linear_damp
+	rotationOffsetAmm=self.rotation-0
+	shouldConstrain=false
 	pass
 
 #func _process(delta):
@@ -30,7 +33,8 @@ func _ready():
 func _integrate_forces(state):
 	phyState=state
 	controlFunc()
-	constrainRotation()
+	if	shouldConstrain:
+		phyState.angular_velocity=0
 func controlFunc():
 	phyState.angular_velocity=0
 	
@@ -42,6 +46,8 @@ func controlFunc():
 #		phyState.angular_velocity+=0
 
 
-
+func _physics_process(delta):
+	constrainRotation()
+	
 func constrainRotation():
 	pass
