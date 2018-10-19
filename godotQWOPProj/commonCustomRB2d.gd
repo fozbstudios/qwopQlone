@@ -20,6 +20,7 @@ var phyState
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	self.linear_damp
 	pass
 
 #func _process(delta):

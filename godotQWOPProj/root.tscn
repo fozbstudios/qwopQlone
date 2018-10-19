@@ -424,7 +424,7 @@ script = ExtResource( 16 )
 [node name="rightThighRigidBody2D" type="RigidBody2D" parent="playerRoot/RBs" index="7"]
 
 editor/display_folded = true
-position = Vector2( 358.18, 226.559 )
+position = Vector2( 359.18, 221.559 )
 rotation = 0.500903
 input_pickable = false
 collision_layer = 1
@@ -523,7 +523,7 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 20 )
-_sections_unfolded = [ "Collision", "Transform" ]
+_sections_unfolded = [ "Angular", "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }

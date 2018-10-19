@@ -36,6 +36,7 @@ leftThigh=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name"
 
 common/physics_fps=70
 2d/default_gravity=10
+2d/default_angular_damp=10
 
 [rendering]
 
