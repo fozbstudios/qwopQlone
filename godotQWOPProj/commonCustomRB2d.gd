@@ -32,11 +32,16 @@ func _integrate_forces(state):
 	controlFunc()
 	constrainRotation()
 func controlFunc():
+	phyState.angular_velocity=0
+	
 	if Input.is_action_pressed(eventStr):
 		#state.apply_torque_impulse(-1)
 		phyState.angular_velocity=ctrlVelo
 		
-	else:
-		phyState.angular_velocity+=0
+#	else:
+#		phyState.angular_velocity+=0
+
+
+
 func constrainRotation():
 	pass
