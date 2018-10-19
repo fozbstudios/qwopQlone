@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends "res://commonCustomRB2d.gd"
 
 # class member variables go here, for example:
 # var a = 2
@@ -7,12 +7,8 @@ extends RigidBody2D
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	self.eventStr="leftThigh"
+	self.ctrlVelo=-5
 	pass
 
 	
-func _integrate_forces(state):
-	if Input.is_action_pressed("leftThigh"):
-		#state.apply_torque_impulse(-1)
-		state.angular_velocity=-5
-	else:
-		state.angular_velocity=0
