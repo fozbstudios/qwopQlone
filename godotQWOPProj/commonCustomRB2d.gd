@@ -5,9 +5,10 @@ extends RigidBody2D
 # var b = "textvar"
 var eventStr
 var ctrlVelo
-
+const MIN_ROTATION=-2.025 #RADIANS
+#const MAX_ROTATION=126 #RADIANS
 #nodeName(relative to playerRoot/RBs if doesnt contain. else format is:
-		#nodeName.DictKey 
+	#nodeName.DictKey 
 var constrainRotationStr  
 var shouldConstrain #bool used for constraining
 # vect used for constraining rotation that other nodes dont use
@@ -37,7 +38,6 @@ func _integrate_forces(state):
 		phyState.angular_velocity=0
 func controlFunc():
 	phyState.angular_velocity=0
-	
 	if Input.is_action_pressed(eventStr):
 		#state.apply_torque_impulse(-1)
 		phyState.angular_velocity=ctrlVelo
@@ -50,4 +50,8 @@ func _physics_process(delta):
 	constrainRotation()
 	
 func constrainRotation():
-	pass
+	var offsetRot=self.rotation+rotationOffsetAmm
+	if offsetRot<MIN_ROTATION:
+		shouldConstrain=true
+	else:
+		shouldConstrain=false

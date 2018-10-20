@@ -7,7 +7,8 @@ extends "res://customCalf.gd"
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	self.eventStr="rightCalf"
+	self.eventStr="rightCalf"	
+	oppositeEventStr="rightThigh"
 	self.ctrlVelo=5
 	pass
 
