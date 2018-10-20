@@ -108,7 +108,7 @@ texture = ExtResource( 2 )
 
 [node name="groundLineStaticBody2D" type="RigidBody2D" parent="nonPlayer" index="1"]
 
-position = Vector2( 509.774, 427.38 )
+position = Vector2( 509.774, 375.38 )
 input_pickable = false
 collision_layer = 4
 collision_mask = 11
@@ -129,6 +129,9 @@ angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 3 )
 _sections_unfolded = [ "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="groundLinephysicsLine" type="Sprite" parent="nonPlayer/groundLineStaticBody2D" index="0"]
 
@@ -138,7 +141,7 @@ texture = ExtResource( 4 )
 
 [node name="groundLineCollisionShape2D" type="CollisionShape2D" parent="nonPlayer/groundLineStaticBody2D" index="1"]
 
-position = Vector2( 0, 28.413 )
+position = Vector2( 0, 27.413 )
 shape = SubResource( 1 )
 
 [node name="playerRoot" type="Node" parent="." index="1"]
@@ -185,7 +188,7 @@ shape = SubResource( 2 )
 
 [node name="leftCalfRigidBody2D" type="RigidBody2D" parent="playerRoot/RBs" index="1"]
 
-position = Vector2( 314.458, 305.534 )
+position = Vector2( 313.458, 306.534 )
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -342,7 +345,7 @@ shape = SubResource( 6 )
 
 [node name="rightCalfRigidBody2D" type="RigidBody2D" parent="playerRoot/RBs" index="5"]
 
-position = Vector2( 357.925, 303.519 )
+position = Vector2( 355.925, 303.519 )
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -543,7 +546,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="LeftFootRigidBody2D" type="RigidBody2D" parent="playerRoot/RBs" index="10"]
 
-position = Vector2( 316.972, 359.765 )
+position = Vector2( 315.972, 360.765 )
 input_pickable = false
 collision_layer = 2
 collision_mask = 4
@@ -681,7 +684,7 @@ softness = 0.12
 
 [node name="leftThighLeftCalfJoint" type="PinJoint2D" parent="playerRoot/joints" index="7"]
 
-position = Vector2( 316.765, 275.108 )
+position = Vector2( 315.765, 276.108 )
 node_a = NodePath("../../RBs/leftThighRigidBody2D")
 node_b = NodePath("../../RBs/leftCalfRigidBody2D")
 bias = 0.005
@@ -699,7 +702,7 @@ softness = 0.12
 
 [node name="leftCalfLeftFoootJoint" type="PinJoint2D" parent="playerRoot/joints" index="9"]
 
-position = Vector2( 311.735, 340.901 )
+position = Vector2( 309.735, 342.901 )
 node_a = NodePath("../../RBs/leftCalfRigidBody2D")
 node_b = NodePath("../../RBs/LeftFootRigidBody2D")
 bias = 0.006
@@ -708,7 +711,7 @@ softness = 0.12
 
 [node name="rightCalfRightFootJoint" type="PinJoint2D" parent="playerRoot/joints" index="10"]
 
-position = Vector2( 358.172, 341.534 )
+position = Vector2( 356.172, 341.534 )
 node_a = NodePath("../../RBs/rightCalfRigidBody2D")
 node_b = NodePath("../../RBs/RightFootRB2d2")
 bias = 0.005
