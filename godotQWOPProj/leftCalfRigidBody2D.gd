@@ -8,7 +8,6 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	self.eventStr="leftCalf"
-	oppositeEventStr="leftThigh"
 	self.ctrlVelo=5
 	pass
 

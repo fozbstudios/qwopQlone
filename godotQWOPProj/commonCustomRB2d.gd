@@ -1,5 +1,6 @@
 extends RigidBody2D
-
+signal RThighSlave(velo)
+signal LThighSlave(velo)
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"

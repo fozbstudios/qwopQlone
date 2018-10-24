@@ -20,3 +20,7 @@ func controlFunc():
 	if Input.is_action_pressed(oppEventStr):
 			#state.apply_torque_impulse(-1)
 			phyState.angular_velocity=-ctrlVelo
+	if phyState.angular_velocity!=0:
+		var sigName = name.to_upper()[0]+"ThighSlave"
+		print(sigName)
+		emit_signal(sigName, phyState.angular_velocity)
