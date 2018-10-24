@@ -9,6 +9,7 @@ func _ready():
 	# Initialization here
 	print(self.rotation)
 	self.eventStr="leftThigh"
+	self.oppEventStr="rightThigh"
 	self.ctrlVelo=-5
 	pass
 
